@@ -3,6 +3,12 @@ const app = express();
 const port = 3000;
 app.use(express.json());
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+
 let tasks = [
   { id: 1, title: 'Learn Node.js basics', done: true },
   { id: 2, title: 'Understand Express routing', done: false },
@@ -68,6 +74,7 @@ app.put('/tasks/:id', (req, res) => {
     }
     return res.json(task);
   });
+
 
 //DELETE
 app.delete('/tasks/:id', (req, res) => {
