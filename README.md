@@ -1,6 +1,6 @@
-# SWAGGERUI CRUD API
+# FASTAPI CRUD API
 
-A CRUD API for items built with **SWAGGERUI** and **in-memory storage**.
+A CRUD API for items built with **FASTAPI** and **in-memory storage**.
 
 ---
 
